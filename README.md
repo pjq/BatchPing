@@ -1,5 +1,16 @@
 Ping all the servers address 
 ==========
+Put your servers address in the server.txt, and add it line by line
+
+How to run the shell
+==========
+```
+chmod +x batchping.sh
+./batchping.sh
+```
+Then you can choose the fastest server.
+
+
 
 ```
 #!/bin/bash
