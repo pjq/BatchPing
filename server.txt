@@ -1,0 +1,14 @@
+jp1.flyhide.com
+jp2.flyhide.com
+jp3.flyhide.com
+us1.flyhide.com
+us2.flyhide.com
+us3.flyhide.com
+us4.flyhide.com
+us5.flyhide.com
+sg1.flyhide.com
+sg2.flyhide.com
+tw1.flyhide.com
+hk1.flyhide.com
+hk2.flyhide.com
+uk1.flyhide.com
