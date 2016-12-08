@@ -39,6 +39,8 @@ echo ""
 echo "The rank list:"
 echo -e "$all"|grep -v "^$"|sort -k1n|grep -n ""
 ```
+Example(With Yunti VPN)
+==========
 ```
 Jianqings-MBP:ytvpn pjq$ ./batchping.sh 
 Start to ping all the servers...
@@ -172,4 +174,5 @@ The rank list:
 127:353ms uk1.jumpko.com
 128:356ms p1.uk1.jumpko.com
 129:358ms p2.uk1.flyhide.com
-130:368ms us5.jumpko.com```
+130:368ms us5.jumpko.com
+```
