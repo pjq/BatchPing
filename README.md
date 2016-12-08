@@ -14,14 +14,25 @@ Then you can choose the fastest server.
 
 ```
 #!/bin/bash
-count=2
+count=4
 all=''
 echo "Start to ping all the servers..."
-for ip in `cat server.txt|head -n 30`
+for ip in `cat server.txt|head -n 2000`
 do
-  avg="`ping -t ${count} ${ip}|grep avg|cut -d "=" -f2|cut -d "/" -f2|cut -d "." -f1` ms-${ip}"
-  echo "${avg}"
-  all+="${avg}\n"
+  avg="`ping -t ${count} ${ip}`"
+  #echo "${avg}"
+  unknown_host=`echo "${avg}"|grep -i avg`
+  if [[ -z "${unknown_host}" ]]
+  then
+      avg="unknown host ${ip}"
+      all+="${avg}ms ${ip}\n"
+  else
+      avg="`echo "${avg}"|grep avg|cut -d "=" -f2|cut -d "/" -f2|cut -d "." -f1`"
+#      echo "${avg}"
+      all+="${avg}ms ${ip}\n"
+  fi
+
+  echo ${avg} ${ip}
 done
 
 echo ""
